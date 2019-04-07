@@ -5,9 +5,6 @@ class PalindromePermutation_1_4 {
      * Idea is to clean the input by trimming whitespace and making all chars to lowercase.
      * In a palindrome there has to be a matching pair for each char but there can be at most 1 single character
      * because it can be in the center of the string: O(n)
-     *
-     * @param input
-     * @return
      */
     boolean isPalindromePermutation(String input) {
         int[] asciiArray = new int[128];
@@ -17,8 +14,8 @@ class PalindromePermutation_1_4 {
             asciiArray[input.charAt(i)]++;
 
         int oddNumCount = 0;
-        for (int i = 0; i < asciiArray.length; i++) {
-            if (asciiArray[i] % 2 != 0)
+        for (int i : asciiArray) {
+            if (i % 2 != 0)
                 oddNumCount++;
             if (oddNumCount > 1)
                 return false;

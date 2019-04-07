@@ -13,7 +13,7 @@ public class IsUnique_1_1Test {
     }
 
     @Test
-    public void when_NonUniqueChars_isUnique_returns_true() {
+    public void when_NonUniqueChars_isUnique_returns_false() {
         assertFalse(new IsUnique_1_1().isUnique("hhola"));
     }
 
